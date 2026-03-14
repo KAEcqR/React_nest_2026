@@ -1,8 +1,5 @@
 {
-  "devDependencies": {
-    "typescript": "^5.9.3"
-  },
-  "name": "cw1",
+  "name": "cw2",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,5 +9,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "typescript": "^5.9.3"
+  }
 }
