@@ -1,0 +1,19 @@
+import { Controller, Get } from '@nestjs/common';
+import { StudentService } from './student.service';
+
+@Controller('student')
+export class StudentController {
+
+    //tworze pole w obecnej klasie 
+    constructor(private readonly studentService: StudentService) {}
+
+    @Get()
+    getStudent() {
+        return this.studentService.getStudent();
+    }
+
+    @Get('/date')
+    getDate() {
+        return this.studentService.getDate();
+    }
+}
