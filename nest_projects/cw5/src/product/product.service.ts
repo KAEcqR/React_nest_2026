@@ -1,30 +1,27 @@
 import { Injectable } from '@nestjs/common';
 import { FileProductRepo } from 'src/models/FileProductRepo';
-import {type IProductRepo} from 'src/models/IProductRepo';
+import { MysqlProductRepo} from 'src/models/MysqlProductRepo';
+import { type IProductRepo } from 'src/models/IProductRepo';
 import { Product } from 'src/models/productModel';
 
 @Injectable()
 export class ProductService {
   private readonly productRepo: IProductRepo;
   constructor() {
-    this.productRepo = new FileProductRepo();
+    this.productRepo = new MysqlProductRepo();
   }
   async getProducts() {
     return this.productRepo.getProducts();
   }
-
-  async getProductByID(id: number) {
+  async getProductById(id: number) {
     return this.productRepo.getProductById(id);
-  };
-
+  }
   async addProduct(product: Product) {
     return this.productRepo.addProduct(product);
   }
-
   async deleteProductById(id: number) {
     return this.productRepo.deleteProductById(id);
   }
-
   async updateProduct(product: Product) {
     return this.productRepo.updateProduct(product);
   }
