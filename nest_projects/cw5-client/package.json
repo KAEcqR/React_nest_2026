@@ -1,5 +1,5 @@
 {
-  "name": "cw5_client",
+  "name": "cw5-client",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,8 +9,8 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "typescript": "~5.9.3",
-    "vite": "^8.0.1"
+    "typescript": "~6.0.2",
+    "vite": "^8.0.4"
   },
   "dependencies": {
     "bootstrap": "^5.3.8"
